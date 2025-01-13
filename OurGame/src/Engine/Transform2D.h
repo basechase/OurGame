@@ -38,6 +38,7 @@ public:
 	void Rotate(float radians);
 	void RemoveChild(Transform2D child);
 	
+	
 
 
 
@@ -47,5 +48,8 @@ public:
 	MathLibrary::Vector2 GlobalPosition();
 	MathLibrary::Vector2 LocalScale();
 	MathLibrary::Vector2 Forward();
+	
+	void LocalPosition(MathLibrary::Vector2 position);
+
 
 };
