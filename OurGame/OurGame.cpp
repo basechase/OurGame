@@ -26,7 +26,7 @@ int main()
 	while (!WindowShouldClose())
 	{
 		BeginDrawing();
-
+		      
 		//Drawing
 		ClearBackground(green);
 
