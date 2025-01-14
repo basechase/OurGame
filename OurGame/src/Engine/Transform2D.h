@@ -15,6 +15,9 @@ class Transform2D
 	//priv member vars
 private:
 	
+	
+
+
 	MathLibrary::Matrix3* _localRotation;
 	MathLibrary::Matrix3* _localTranslation;
 	MathLibrary::Matrix3* _localScale;
@@ -43,13 +46,34 @@ public:
 
 
 	//getters  setters
+	Actor* GetOwner() { return _owner; }
 
+	float GetToDegrees();
+
+	std::vector<Transform2D*> GetChild() { return _children; }
+	Transform2D* GetParent() { return _parent; }
 	MathLibrary::Vector2 LocalPositon();
+	MathLibrary::Vector2 LocalPosition();
 	MathLibrary::Vector2 GlobalPosition();
+
 	MathLibrary::Vector2 LocalScale();
+	void LocalScale(MathLibrary::Vector2 scale);
+	MathLibrary::Vector2 GlobalPosition();
+	MathLibrary::Vector2 GlobalScale();
 	MathLibrary::Vector2 Forward();
 	
-	void LocalPosition(MathLibrary::Vector2 position);
+	MathLibrary::Vector2 Right();
+	float LocalRotationAngle(MathLibrary::Matrix3 rotation);
+
+
+	MathLibrary::Matrix3 LocalRotation();
+	void LocalRotation(MathLibrary::Matrix3);
+
+	float ToDegrees(float radians);
+	float ToRadians(float degrees);
+
+
+
 
 
 };
