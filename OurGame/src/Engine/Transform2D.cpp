@@ -2,6 +2,7 @@
 #include <cmath>
 #define PI 3.14
 
+
 Transform2D::Transform2D(Actor* Owner)
 {
 	_localMatrix = new MathLibrary::Matrix3(1, 0, 0, 0, 1, 0, 0, 0, 1);
@@ -42,9 +43,7 @@ void Transform2D::Rotate(float radians)
 
 
 
-/// <summary>
-/// Updates the Transforms Matricies
-/// </summary>
+
 void Transform2D::UpdateTransforms()
 {
 	*_localMatrix = *_localTranslation * *_localRotation * *_localScale;
@@ -66,15 +65,16 @@ void Transform2D::UpdateTransforms()
 
 void Transform2D::AddChild(Transform2D* child)
 {
-	if (child == _parent) return;
-
-	_children.push_back(child);
+	if (child == _parent)
+	{
+		return;
+	}
 	child->_parent = this;
+	_children.Add(child);
 }
 
 bool Transform2D::RemoveChild(Transform2D* child)
 {
-
 
 	if (_children.Length() <= 0)
 		return false;
@@ -91,22 +91,17 @@ bool Transform2D::RemoveChild(Transform2D* child)
 
 
 
+
 }
 
-//Getters and Setters 
 
-/// <summary>
-/// Gets the Local Position
-/// </summary>
-/// <returns></returns>
+
+
 MathLibrary::Vector2 Transform2D::LocalPosition()
 {
 	return MathLibrary::Vector2(_localTranslation->m02, _localTranslation->m12);
 }
-/// <summary>
-/// Sets the local Position
-/// </summary>
-/// <param name="position"></param>
+
 void Transform2D::LocalPosition(MathLibrary::Vector2 position)
 {
 	_localTranslation->m02 = position.x;
@@ -150,28 +145,17 @@ void Transform2D::LocalRotation(MathLibrary::Matrix3 rotation)
 	_localRotationAngle = -(float)atan2(_localRotation->m01, _localRotation->m00);
 	UpdateTransforms();
 }
-/// <summary>
-/// Calculates the input to degrees
-/// </summary>
-/// <param name="radian"></param>
-/// <returns></returns>
+
 float Transform2D::ToDegrees(float radian)
 {
 	return (radian * 180) / PI;
 }
-/// <summary>
-/// Calculates the input to radians
-/// </summary>
-/// <param name="degree"></param>
-/// <returns></returns>
+
 float Transform2D::ToRadians(float degree)
 {
 	return degree * PI / 180;
 }
-/// <summary>
-/// Returns this objects local rotation angle in degrees
-/// </summary>
-/// <returns></returns>
+
 float Transform2D::GetToDegrees()
 {
 	return (this->_localRotationAngle * 180) / PI;
