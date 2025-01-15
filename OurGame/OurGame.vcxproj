@@ -142,6 +142,7 @@
     <ClCompile Include="src\Engine\Actor.cpp" />
     <ClCompile Include="src\Engine\Components\Component.cpp" />
     <ClCompile Include="src\Engine\Components\Scene.cpp" />
+    <ClCompile Include="src\Engine\Player.cpp" />
     <ClCompile Include="src\Engine\Transform2D.cpp" />
     <ClCompile Include="src\Game.cpp" />
   </ItemGroup>
@@ -150,8 +151,10 @@
     <ClInclude Include="src\Engine\Components\Component.h" />
     <ClInclude Include="src\Engine\Components\Scene.h" />
     <ClInclude Include="src\Engine\DynamicArray.h" />
+    <ClInclude Include="src\Engine\Player.h" />
     <ClInclude Include="src\Engine\Transform2D.h" />
     <ClInclude Include="src\Game.h" />
+    <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\OurGame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
