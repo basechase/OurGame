@@ -1,9 +1,11 @@
 #pragma once
-
 class Actor;
 
 
+
 class Scene {
+	Scene();
+	~Scene();
 public:
 	void AddActor(Actor* actor);
 	bool RemoveActor(Actor* actor);
