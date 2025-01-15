@@ -9,6 +9,7 @@ class Actor;
 class Transform2D 
 {
 	//construct & destructor
+public:
 	Transform2D(Actor* Owner = nullptr);
 	~Transform2D();
 

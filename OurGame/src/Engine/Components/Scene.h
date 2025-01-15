@@ -1,12 +1,15 @@
 #pragma once
+#include "Engine/DynamicArray.h"
 class Actor;
 
 
 
 class Scene {
+public:
 	Scene();
 	~Scene();
-public:
+
+
 	void AddActor(Actor* actor);
 	bool RemoveActor(Actor* actor);
 	virtual void Start();
@@ -15,7 +18,9 @@ public:
 
 
 
+
 private: 
-	
+	DynamicArray<Actor*> m_actors;
+	DynamicArray<Actor*> m_actorsToRemove;
 
 };

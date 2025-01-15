@@ -2,6 +2,7 @@
 class Actor;
 
 class Component {
+public:
 	Component(Actor* owner = nullptr);
 	~Component();
 
