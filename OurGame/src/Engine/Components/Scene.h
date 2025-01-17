@@ -4,7 +4,8 @@ class Actor;
 
 
 
-class Scene {
+class Scene 
+{
 public:
 	Scene();
 	~Scene();

@@ -1,5 +1,7 @@
 #include "Actor.h"
 #include "Engine/Transform2D.h"
+#include "Game.h"
+#include "Engine/Components/Scene.h"
 Actor::Actor()
 {
 	Transform = new Transform2D();
@@ -42,6 +44,7 @@ Actor* Actor::Instantiate(Actor* actor, Transform2D* parent, MathLibrary::Vector
 	{
 		parent->AddChild(actor->Transform);
 	}
+	Game::instance->GetCurrentScene()->AddActor(actor);
 	return actor;
 }
 
