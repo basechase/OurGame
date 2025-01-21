@@ -14,7 +14,7 @@ Player::~Player()
 void Player::Start()
 {
 	Actor::Start();
-	GetTransform()->Translate({300,300});
+	GetTransform()->Translate({300,500});
 }
 
 void Player::Update(double deltaTime)
@@ -38,7 +38,7 @@ void Player::Update(double deltaTime)
 	
 	Rectangle mainbody = Rectangle{ GetTransform()->LocalPosition().x, GetTransform()->LocalPosition().y * m_scaler, GetTransform()->LocalScale().x, GetTransform()->LocalScale().y * m_scaler};
 	
-	DrawCircle(GetTransform()->LocalPosition().x, GetTransform()->LocalPosition().y, m_scaler, BLACK);
+	DrawCircle(GetTransform()->LocalPosition().x, GetTransform()->LocalPosition().y, 10, BLACK);
 
 }
 
