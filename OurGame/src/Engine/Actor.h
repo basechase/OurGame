@@ -1,7 +1,9 @@
 #pragma once
 #include "Vector2.h"
 #include "DynamicArray.h"
+#include "Engine/Components/Component.h"
 class Transform2D;
+class Collider;
 
 
 class Actor
@@ -22,13 +24,14 @@ public:
 	virtual void End();
 	virtual void Update(double deltatime);
 
+	Collider* m_collider;
+	Transform2D* Transform;
 	
 
 
 private:
 	bool m_started;
 	bool m_enabled;
-	Transform2D* Transform;
 
 
 
