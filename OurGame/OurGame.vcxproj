@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="src\Engine\Actor.cpp" />
     <ClCompile Include="src\Engine\Components\Component.cpp" />
+    <ClCompile Include="src\Engine\Components\Food.cpp" />
     <ClCompile Include="src\Engine\Components\Level.cpp" />
     <ClCompile Include="src\Engine\Components\Scene.cpp" />
     <ClCompile Include="src\Engine\Player.cpp" />
@@ -150,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="src\Engine\Actor.h" />
     <ClInclude Include="src\Engine\Components\Component.h" />
+    <ClInclude Include="src\Engine\Components\Food.h" />
     <ClInclude Include="src\Engine\Components\Level.h" />
     <ClInclude Include="src\Engine\Components\Scene.h" />
     <ClInclude Include="src\Engine\DynamicArray.h" />

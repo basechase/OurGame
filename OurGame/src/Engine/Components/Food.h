@@ -1,10 +1,10 @@
 #pragma once
-#include "Engine/Components/Scene.h"
-class Level : public Scene
+#include "Engine/Actor.h"
+class Food : public Actor
 {
 public:
-	Level();
-	~Level();
+	Food();
+	~Food();
 
 	void Start();
 	void Update(double deltaTime);

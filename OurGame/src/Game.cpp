@@ -40,8 +40,6 @@ void Game::Run()
 
 		m_currentScene->Update(deltaTime);
 
-		
-
 		EndDrawing();
 	}
 	m_currentScene->End();
