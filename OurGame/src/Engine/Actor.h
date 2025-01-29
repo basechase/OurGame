@@ -23,6 +23,9 @@ public:
 	virtual void Start();
 	virtual void End();
 	virtual void Update(double deltatime);
+	virtual void OnCollision(Actor* other);
+
+
 
 	Collider* m_collider;
 	Transform2D* Transform;

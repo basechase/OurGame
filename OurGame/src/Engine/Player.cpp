@@ -1,4 +1,4 @@
-#include "Player.h"
+ #include "Player.h"
 #include "raylib.h"
 #include "Engine/Transform2D.h"
 
@@ -22,11 +22,13 @@ void Player::Update(double deltaTime)
 	Actor::Update(deltaTime);
 	if (IsKeyDown(KEY_A))
 	{
+		
 		GetTransform()->Translate(GetTransform()->Forward() * -2);
 	}
 	if (IsKeyDown(KEY_D))
 	{
-		GetTransform()->Translate(GetTransform()->Forward() * 2);
+		
+	GetTransform()->Translate(GetTransform()->Forward() * 2);
 	}
 	if (IsKeyDown(KEY_W))
 	{
