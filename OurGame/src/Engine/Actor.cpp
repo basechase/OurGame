@@ -78,3 +78,4 @@ void Actor::Update(double deltatime)
 void Actor::OnCollision(Actor* other)
 {
 }
+

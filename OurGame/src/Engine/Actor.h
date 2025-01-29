@@ -2,8 +2,9 @@
 #include "Vector2.h"
 #include "DynamicArray.h"
 #include "Engine/Components/Component.h"
+#include "Components/Collision/Collider.h"
 class Transform2D;
-class Collider;
+
 
 
 class Actor

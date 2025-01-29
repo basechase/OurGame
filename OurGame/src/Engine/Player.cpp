@@ -49,3 +49,7 @@ void Player::End()
 	Actor::End();
 }
 
+void Player::OnCollision(Actor* other)
+{
+}
+

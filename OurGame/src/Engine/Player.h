@@ -12,7 +12,7 @@ public:
 	void End();
 	float GetScale() { return m_scaler; }
 	void SetScale(int value) { value = m_scaler; }
-	void  OnCollision(Actor* owner) override;
+	void OnCollision(Actor* other) override;
 
 private:
 	float m_scaler;

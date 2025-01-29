@@ -11,7 +11,7 @@ public:
 	void End();
 	bool GetStarted() { return m_started; }
 	int GetRandPos();
-
+	void OnCollision(Actor* other) override;
 
 private:
 	bool m_started = false;
