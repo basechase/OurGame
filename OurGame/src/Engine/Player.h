@@ -11,7 +11,7 @@ public:
 	void Update(double deltaTime);
 	void End();
 	float GetScale() { return m_scaler; }
-	void SetScale(int value) { value = m_scaler; }
+	void SetScale(float value) { value = m_scaler; }
 	void OnCollision(Actor* other) override;
 
 private:

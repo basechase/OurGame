@@ -5,7 +5,7 @@
 #include "Engine/Player.h"
 #include "./raymath.h"
 #include "Collision/CircleCollider.h"
-
+#include "Food.h"
 Level::Level()
 {
 }
@@ -18,13 +18,13 @@ int score = 0;
 void Level::Start()
 {
 	Scene::Start();
-
+	Actor::Instantiate(new Food());
 	Actor::Instantiate(new Player());
 	//Collider(Player());
 	//^ no idea
-
-	CircleCollider(Player());
 	
+	CircleCollider(Player());
+	CircleCollider(Food());
 
 	
 }
