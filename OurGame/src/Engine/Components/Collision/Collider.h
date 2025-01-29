@@ -12,7 +12,7 @@ public:
 	bool CheckCollison(Actor* other);
 	virtual bool CheckCollisionCircle(CircleCollider* collider);
 	virtual void Draw(); 
-
+	void DrawHitbox();
 	Actor* Owner;
 
 

@@ -1,6 +1,7 @@
 #include "Collider.h" 
 #include "Engine/Actor.h"
 #include "CircleCollider.h"
+#include "raylib.h"
 Collider::Collider(Actor* owner)
 {
 	Owner = owner;
@@ -32,3 +33,4 @@ void Collider::Draw()
 {
 
 }
+

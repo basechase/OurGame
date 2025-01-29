@@ -10,7 +10,8 @@ public:
 	void Start();
 	void Update(double deltaTime);
 	void End();
-
+	float GetScale() { return m_scaler; }
+	void SetScale(int value) { value = m_scaler; }
 private:
 	float m_scaler;
 };

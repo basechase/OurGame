@@ -20,7 +20,7 @@ bool CircleCollider::CheckCollisionCircle(CircleCollider* collider)
 	float sumRadi = collider->CollisionRadius + CollisionRadius;
 	
 	MathLibrary::Vector2 left = { collider->Owner->Transform->GlobalPosition() };
-	
+	 
 	MathLibrary::Vector2 right = { Owner->Transform->GlobalPosition() + m_offset };
 	float distance = (left - right).getMagnitude();
 	return sumRadi >= distance;

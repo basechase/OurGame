@@ -17,4 +17,4 @@ private:
 	MathLibrary::Vector2 m_offset;
 	bool m_enableDraw;
 
-};
+}; 
